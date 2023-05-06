@@ -1,11 +1,22 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
+        float n1 = 0;
+        float n2 = 0;
+        try {
+            n1 = getUserInputFloat("Please enter your first number: ");
+            n2 = getUserInputFloat("Please enter your second number: ");
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter valid numbers.");
+        }
 
-        float n1 = getUserInputFloat("Please enter your first number: ");
-        float n2 = getUserInputFloat("Please enter your second number: ");
+        System.out.println("Sum: " + sum(n1, n2));
+        System.out.println("Substraction:1 " + substract(n1, n2));
+        System.out.println("Multiplication: " + multiply(n1, n2));
+        System.out.println("Division: " + divide(n1, n2));
 
     }
 
