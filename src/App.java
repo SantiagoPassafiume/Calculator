@@ -14,7 +14,7 @@ public class App {
         }
 
         System.out.println("Sum: " + sum(n1, n2));
-        System.out.println("Substraction:1 " + substract(n1, n2));
+        System.out.println("Subtraction:1 " + subtract(n1, n2));
         System.out.println("Multiplication: " + multiply(n1, n2));
         System.out.println("Division: " + divide(n1, n2));
 
@@ -24,7 +24,7 @@ public class App {
         return n1 + n2;
     }
 
-    public static float substract(float n1, float n2) {
+    public static float subtract(float n1, float n2) {
         return n1 - n2;
     }
 
