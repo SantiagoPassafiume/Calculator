@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
-        float n1 = 0;
-        float n2 = 0;
+        float n1;
+        float n2;
         try {
             n1 = getUserInputFloat("Please enter your first number: ");
             n2 = getUserInputFloat("Please enter your second number: ");
