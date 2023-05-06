@@ -4,8 +4,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        float n1 = getUserInput("Please enter your first number: ");
-        float n2 = getUserInput("Please enter your second number: ");
+        float n1 = getUserInputFloat("Please enter your first number: ");
+        float n2 = getUserInputFloat("Please enter your second number: ");
 
         System.out.println("Sum: " + sum(n1, n2));
         System.out.println("Substraction:1 " + substract(n1, n2));
@@ -35,7 +35,7 @@ public class App {
         return n1 / n2;
     }
 
-    public static float getUserInput(String prompt) {
+    public static float getUserInputFloat(String prompt) {
         Scanner scanner = new Scanner(System.in);
         System.out.print(prompt);
         float input = scanner.nextFloat();
