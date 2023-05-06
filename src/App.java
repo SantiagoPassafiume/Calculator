@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
+
         float n1 = getUserInput("Please enter your first number: ");
         float n2 = getUserInput("Please enter your second number: ");
 
@@ -27,7 +28,7 @@ public class App {
 
     public static float divide(float n1, float n2) {
         if (n2 == 0) {
-            RuntimeException exception = new ArithmeticException("Division by zero is not allowed.");
+            ArithmeticException exception = new ArithmeticException("Division by zero is not allowed.");
             exception.setStackTrace(new StackTraceElement[0]);
             throw exception;
         }
