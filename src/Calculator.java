@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        float n1 = 0;
-        float n2 = 0;
+        float n1;
+        float n2;
         char operation;
         Scanner scanner = new Scanner(System.in);
 
