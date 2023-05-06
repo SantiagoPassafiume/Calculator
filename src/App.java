@@ -13,7 +13,7 @@ public class App {
             System.out.println();
 
             System.out.println("Sum: " + sum(n1, n2));
-            System.out.println("Subtraction:1 " + subtract(n1, n2));
+            System.out.println("Subtraction: " + subtract(n1, n2));
             System.out.println("Multiplication: " + multiply(n1, n2));
             System.out.println("Division: " + divide(n1, n2));
         } catch (InputMismatchException e) {
