@@ -4,20 +4,36 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
-        float n1;
-        float n2;
+        float n1 = 0;
+        float n2 = 0;
+        char operation;
+
         try {
             n1 = getUserInputFloat("Please enter your first number: ");
             n2 = getUserInputFloat("Please enter your second number: ");
 
-            System.out.println();
-
-            System.out.println("Sum: " + sum(n1, n2));
-            System.out.println("Subtraction: " + subtract(n1, n2));
-            System.out.println("Multiplication: " + multiply(n1, n2));
-            System.out.println("Division: " + divide(n1, n2));
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter valid numbers.");
+        }
+
+        operation = getUserInput();
+
+        switch (operation) {
+            case '+':
+                System.out.println("Sum: " + sum(n1, n2));
+                break;
+            case '-':
+                System.out.println("Subtraction: " + subtract(n1, n2));
+                break;
+            case '*':
+                System.out.println("Multiplication: " + multiply(n1, n2));
+                break;
+            case '/':
+                System.out.println("Division: " + divide(n1, n2));
+                break;
+            default:
+                // code to be executed when expression doesn't match any case
+                break;
         }
 
     }
@@ -57,7 +73,6 @@ public class App {
 
         char userInput = input.charAt(0);
 
-        scanner.close();
         return userInput;
     }
 
