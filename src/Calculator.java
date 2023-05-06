@@ -15,6 +15,7 @@ public class Calculator {
 
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter valid numbers.");
+            return;
         }
 
         scanner.nextLine(); // Consume the newline character
@@ -78,7 +79,7 @@ public class Calculator {
                 System.out.println("Division: " + divide(n1, n2));
                 break;
             default:
-                // code to be executed when expression doesn't match any case
+                System.out.printf("%c is not a valid operator.\n", operation);
                 break;
         }
     }
