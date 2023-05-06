@@ -22,10 +22,10 @@ public class App {
         return n1 / n2;
     }
 
-    public static int getUserInput(String prompt) {
+    public static float getUserInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         System.out.print(prompt);
-        int input = scanner.nextInt();
+        float input = scanner.nextFloat();
         scanner.close();
         return input;
     }
