@@ -9,8 +9,8 @@ public class App {
         char operation;
 
         try {
-            n1 = getUserInputFloat("Please enter your first number: ");
-            n2 = getUserInputFloat("Please enter your second number: ");
+            n1 = getUserInputFloat("Enter your first number: ");
+            n2 = getUserInputFloat("Enter your second number: ");
 
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter valid numbers.");
@@ -68,7 +68,7 @@ public class App {
 
     public static char getUserInput() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a character: ");
+        System.out.print("Enter the operation you want to perform: ");
         String input = scanner.nextLine();
 
         char userInput = input.charAt(0);
