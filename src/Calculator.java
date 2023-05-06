@@ -18,23 +18,7 @@ public class Calculator {
 
         operation = getUserInput();
 
-        switch (operation) {
-            case '+':
-                System.out.println("Sum: " + sum(n1, n2));
-                break;
-            case '-':
-                System.out.println("Subtraction: " + subtract(n1, n2));
-                break;
-            case '*':
-                System.out.println("Multiplication: " + multiply(n1, n2));
-                break;
-            case '/':
-                System.out.println("Division: " + divide(n1, n2));
-                break;
-            default:
-                // code to be executed when expression doesn't match any case
-                break;
-        }
+        performOperation(n1, n2, operation);
 
     }
 
@@ -74,6 +58,26 @@ public class Calculator {
         char userInput = input.charAt(0);
 
         return userInput;
+    }
+
+    public static void performOperation(float n1, float n2, char operation) {
+        switch (operation) {
+            case '+':
+                System.out.println("Sum: " + sum(n1, n2));
+                break;
+            case '-':
+                System.out.println("Subtraction: " + subtract(n1, n2));
+                break;
+            case '*':
+                System.out.println("Multiplication: " + multiply(n1, n2));
+                break;
+            case '/':
+                System.out.println("Division: " + divide(n1, n2));
+                break;
+            default:
+                // code to be executed when expression doesn't match any case
+                break;
+        }
     }
 
 }
