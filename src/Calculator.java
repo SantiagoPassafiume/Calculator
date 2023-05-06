@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public class Calculator {
 
     public static void main(String[] args) {
         float n1 = 0;
