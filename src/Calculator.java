@@ -12,15 +12,13 @@ public class Calculator {
         try {
             firstNumber = getUserInputFloat("Enter your first number: ", scanner);
             secondNumber = getUserInputFloat("Enter your second number: ", scanner);
+            scanner.nextLine(); // Consume the newline character
+            operation = getUserInput("Enter the operation you want to perform: ", scanner);
 
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter valid numbers.");
             return;
         }
-
-        scanner.nextLine(); // Consume the newline character
-
-        operation = getUserInput("Enter the operation you want to perform: ", scanner);
 
         performOperation(firstNumber, secondNumber, operation);
 
