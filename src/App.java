@@ -7,11 +7,6 @@ public class App {
         float n1 = getUserInputFloat("Please enter your first number: ");
         float n2 = getUserInputFloat("Please enter your second number: ");
 
-        System.out.println("Sum: " + sum(n1, n2));
-        System.out.println("Substraction:1 " + substract(n1, n2));
-        System.out.println("Multiplication: " + multiply(n1, n2));
-        System.out.println("Division: " + divide(n1, n2));
-
     }
 
     public static float sum(float n1, float n2) {
@@ -40,6 +35,17 @@ public class App {
         System.out.print(prompt);
         float input = scanner.nextFloat();
         return input;
+    }
+
+    public static char getUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        String input = scanner.nextLine();
+
+        char userInput = input.charAt(0);
+
+        scanner.close();
+        return userInput;
     }
 
 }
