@@ -10,6 +10,8 @@ public class App {
             n1 = getUserInputFloat("Please enter your first number: ");
             n2 = getUserInputFloat("Please enter your second number: ");
 
+            System.out.println();
+
             System.out.println("Sum: " + sum(n1, n2));
             System.out.println("Subtraction:1 " + subtract(n1, n2));
             System.out.println("Multiplication: " + multiply(n1, n2));
