@@ -7,18 +7,23 @@ public class Calculator {
         float n1 = 0;
         float n2 = 0;
         char operation;
+        Scanner scanner = new Scanner(System.in);
 
         try {
-            n1 = getUserInputFloat("Enter your first number: ");
-            n2 = getUserInputFloat("Enter your second number: ");
+            n1 = getUserInputFloat("Enter your first number: ", scanner);
+            n2 = getUserInputFloat("Enter your second number: ", scanner);
 
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter valid numbers.");
         }
 
-        operation = getUserInput();
+        scanner.nextLine(); // Consume the newline character
+
+        operation = getUserInput("Enter the operation you want to perform: ", scanner);
 
         performOperation(n1, n2, operation);
+
+        scanner.close();
 
     }
 
@@ -43,16 +48,14 @@ public class Calculator {
         return n1 / n2;
     }
 
-    public static float getUserInputFloat(String prompt) {
-        Scanner scanner = new Scanner(System.in);
+    public static float getUserInputFloat(String prompt, Scanner scanner) {
         System.out.print(prompt);
         float input = scanner.nextFloat();
         return input;
     }
 
-    public static char getUserInput() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the operation you want to perform: ");
+    public static char getUserInput(String prompt, Scanner scanner) {
+        System.out.print(prompt);
         String input = scanner.nextLine();
 
         char userInput = input.charAt(0);
