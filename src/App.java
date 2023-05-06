@@ -26,6 +26,11 @@ public class App {
     }
 
     public static float divide(float n1, float n2) {
+        if (n2 == 0) {
+            RuntimeException exception = new ArithmeticException("Division by zero is not allowed.");
+            exception.setStackTrace(new StackTraceElement[0]);
+            throw exception;
+        }
         return n1 / n2;
     }
 
