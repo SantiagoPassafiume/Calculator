@@ -3,6 +3,13 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
+        float n1 = getUserInput("Please enter your first number: ");
+        float n2 = getUserInput("Please enter your second number: ");
+
+        System.out.println("Sum: " + sum(n1, n2));
+        System.out.println("Substraction:1 " + substract(n1, n2));
+        System.out.println("Multiplication: " + multiply(n1, n2));
+        System.out.println("Division: " + divide(n1, n2));
 
     }
 
@@ -26,7 +33,6 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.print(prompt);
         float input = scanner.nextFloat();
-        scanner.close();
         return input;
     }
 
