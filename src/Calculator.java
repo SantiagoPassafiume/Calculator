@@ -4,14 +4,14 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        float n1;
-        float n2;
+        float firstNumber;
+        float secondNumber;
         char operation;
         Scanner scanner = new Scanner(System.in);
 
         try {
-            n1 = getUserInputFloat("Enter your first number: ", scanner);
-            n2 = getUserInputFloat("Enter your second number: ", scanner);
+            firstNumber = getUserInputFloat("Enter your first number: ", scanner);
+            secondNumber = getUserInputFloat("Enter your second number: ", scanner);
 
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter valid numbers.");
@@ -22,31 +22,31 @@ public class Calculator {
 
         operation = getUserInput("Enter the operation you want to perform: ", scanner);
 
-        performOperation(n1, n2, operation);
+        performOperation(firstNumber, secondNumber, operation);
 
         scanner.close();
 
     }
 
-    public static float sum(float n1, float n2) {
-        return n1 + n2;
+    public static float sum(float firstNumber, float secondNumber) {
+        return firstNumber + secondNumber;
     }
 
-    public static float subtract(float n1, float n2) {
-        return n1 - n2;
+    public static float subtract(float firstNumber, float secondNumber) {
+        return firstNumber - secondNumber;
     }
 
-    public static float multiply(float n1, float n2) {
-        return n1 * n2;
+    public static float multiply(float firstNumber, float secondNumber) {
+        return firstNumber * secondNumber;
     }
 
-    public static float divide(float n1, float n2) {
-        if (n2 == 0) {
+    public static float divide(float firstNumber, float secondNumber) {
+        if (secondNumber == 0) {
             ArithmeticException exception = new ArithmeticException("Division by zero is not allowed.");
             exception.setStackTrace(new StackTraceElement[0]);
             throw exception;
         }
-        return n1 / n2;
+        return firstNumber / secondNumber;
     }
 
     public static float getUserInputFloat(String prompt, Scanner scanner) {
@@ -64,19 +64,19 @@ public class Calculator {
         return userInput;
     }
 
-    public static void performOperation(float n1, float n2, char operation) {
+    public static void performOperation(float firstNumber, float secondNumber, char operation) {
         switch (operation) {
             case '+':
-                System.out.println("Sum: " + sum(n1, n2));
+                System.out.println("Sum: " + sum(firstNumber, secondNumber));
                 break;
             case '-':
-                System.out.println("Subtraction: " + subtract(n1, n2));
+                System.out.println("Subtraction: " + subtract(firstNumber, secondNumber));
                 break;
             case '*':
-                System.out.println("Multiplication: " + multiply(n1, n2));
+                System.out.println("Multiplication: " + multiply(firstNumber, secondNumber));
                 break;
             case '/':
-                System.out.println("Division: " + divide(n1, n2));
+                System.out.println("Division: " + divide(firstNumber, secondNumber));
                 break;
             default:
                 System.out.printf("%c is not a valid operator.\n", operation);
